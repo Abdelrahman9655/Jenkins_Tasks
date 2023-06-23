@@ -1,4 +1,3 @@
-FROM openjdk:9
-ADD target/my-maven-docker-project.jar my-maven-docker-project.jar
-ENTRYPOINT ["java", "-jar","my-maven-docker-project.jar"]
-EXPOSE 8080
+FROM ubuntu:22.04
+RUN apt-get update
+RUN apt-get install -y curl
